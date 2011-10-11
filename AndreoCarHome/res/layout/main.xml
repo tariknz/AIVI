@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AbsoluteLayout android:id="@+id/AbsoluteLayout01" 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:background="@drawable/bg" android:layout_width="800px" android:layout_height="427px">
+
+
+<Gallery xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/gallery"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_x="0px" android:layout_y="225px"
+/>
+
+<ImageView android:id="@+id/ImageView01" 
+	android:layout_width="wrap_content" 
+	android:background="@drawable/arrow_left" 
+	android:clickable="true" 
+	android:layout_x="0dip" 
+	android:layout_height="wrap_content" 
+	android:baselineAlignBottom="true" android:layout_y="300px">
+</ImageView>
+
+<ImageView android:id="@+id/ImageView01" 
+	android:layout_width="wrap_content" 
+	android:clickable="true" 
+	android:layout_height="wrap_content" 
+	android:baselineAlignBottom="true" 
+	android:background="@drawable/arrow_right" 
+	android:adjustViewBounds="false" android:layout_x="747dip" android:layout_y="300px">
+</ImageView>
+
+
+<TextView android:id="@+id/tvWeather" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:text=" "
+	android:layout_x="37px" android:layout_y="37px" />
+
+<TextView android:id="@+id/tvWeather2" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:text=" "
+	android:layout_x="37px" android:layout_y="200px" />
+
+<TextView android:id="@+id/tvSpeed" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:text=" "
+	android:layout_x="37px" android:layout_y="177px" />
+
+<TextView android:id="@+id/tvAppName" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:text=" "
+	android:layout_x="440px" android:layout_y="325px"
+	android:textStyle="bold"
+	android:textColor="#FFFFFF"
+	android:textSize="40sp"
+	android:shadowColor="#000000"
+	android:shadowDx="0.0"
+	android:shadowDy="0.0"
+	android:shadowRadius="3.0"
+	 />
+
+<ImageView android:id="@+id/ivWeather" 
+	android:layout_width="wrap_content" 
+	android:src="@drawable/weather_sunny" 
+	android:clickable="true" 
+	android:layout_x="10dip" 
+	android:layout_height="wrap_content" 
+	android:baselineAlignBottom="true" android:layout_y="100px">
+</ImageView>
+
+</AbsoluteLayout>
