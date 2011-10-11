@@ -30,7 +30,6 @@
 	android:adjustViewBounds="false" android:layout_x="747dip" android:layout_y="300px">
 </ImageView>
 
-
 <TextView android:id="@+id/tvWeather" android:layout_width="wrap_content"
 	android:layout_height="wrap_content" android:text=" "
 	android:layout_x="37px" android:layout_y="37px" />
@@ -39,9 +38,81 @@
 	android:layout_height="wrap_content" android:text=" "
 	android:layout_x="37px" android:layout_y="200px" />
 
+<RelativeLayout android:id="@+id/RelativeLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent">
+
 <TextView android:id="@+id/tvSpeed" android:layout_width="wrap_content"
-	android:layout_height="wrap_content" android:text=" "
-	android:layout_x="37px" android:layout_y="177px" />
+	android:layout_height="wrap_content" android:text="50"
+	android:textSize="100sp"
+	android:textStyle="bold"
+	android:layout_centerHorizontal="true" android:paddingTop="100px"
+	android:textColor="#ffffff"
+	android:shadowColor="#000000"
+	android:shadowDx="0.0"
+	android:shadowDy="0.0"
+	android:shadowRadius="3.0"
+	/>
+	 
+<TextView android:id="@+id/tvSpeedLabel" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:text="km/h"
+	android:textSize="20sp"
+	android:textStyle="bold"
+	android:gravity="center_horizontal" android:layout_centerHorizontal="true" android:shadowColor="#000000"
+	android:shadowDx="0.0"
+	android:shadowDy="0.0"
+	android:shadowRadius="3.0"
+	android:paddingTop="210px"/>
+
+<ImageView android:id="@+id/ivSpeedLimit" 
+	android:src="@drawable/speed_50k" 
+	android:clickable="true" 
+	android:scaleType="fitXY" 
+	android:layout_height="140px" 
+	android:layout_width="140px" 
+	android:layout_x="40px" 
+	android:layout_y="50px" android:layout_alignParentRight="true" android:layout_marginTop="50px" android:layout_marginRight="40px" android:padding="10px">
+</ImageView>
+	
+</RelativeLayout>
+
+<RelativeLayout android:id="@+id/RelativeLayout02" android:layout_width="280px" android:layout_height="250px">
+
+<TextView android:id="@+id/tvTemp" 
+	android:layout_width="wrap_content"
+	android:layout_alignParentRight="true"
+	android:textSize="50px" android:textStyle="bold"
+	android:layout_marginTop="100px"
+	android:shadowColor="#000000"
+	android:shadowDx="0.0"
+	android:shadowDy="0.0"
+	android:shadowRadius="3.0" android:gravity="fill_vertical|fill_horizontal" android:layout_height="wrap_content" android:text="N/A"/>
+
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:layout_alignParentRight="true" android:id="@+id/tvCondition"
+	android:textSize="20px" android:layout_below="@id/tvTemp" android:text="No Connection"/>
+
+<TextView android:layout_width="wrap_content"
+	android:textStyle="bold"
+	android:id="@+id/tvCity" android:layout_alignParentRight="true" android:layout_below="@+id/tvCondition" android:textSize="30px" android:paddingLeft="4px" android:text="City" android:layout_centerVertical="true" android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
+
+
+
+
+<!-- <TextView android:id="@+id/tvSpeed" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:text="50"
+	android:layout_x="373px" android:layout_y="123px"
+	android:textSize="100sp"
+	android:textStyle="bold"
+	android:layout_gravity="center" />
+	 
+<TextView android:id="@+id/tvSpeedLabel" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:text="km/h"
+	android:layout_x="373px" android:layout_y="223px"
+	android:textSize="20sp"
+	android:textStyle="bold"
+	android:gravity="center_horizontal" /> -->
 
 <TextView android:id="@+id/tvAppName" android:layout_width="wrap_content"
 	android:layout_height="wrap_content" android:text=" "
@@ -53,15 +124,26 @@
 	android:shadowDx="0.0"
 	android:shadowDy="0.0"
 	android:shadowRadius="3.0"
-	 />
+	 /><RelativeLayout android:id="@+id/RelativeLayout03" android:layout_width="280px" android:layout_height="250px" android:layout_x="520px">
+
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="50px" android:textStyle="bold" android:layout_marginTop="100px" android:id="@+id/tvLimit" android:text="Limit" />
+
+<TextView android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:textSize="20px"
+	android:id="@+id/tvStreetName" android:layout_below="@id/tvLimit"
+	android:text="Street Address" android:paddingLeft="4px"
+	android:shadowColor="#000000" android:shadowDx="0.0" android:shadowDy="0.0"
+	android:shadowRadius="3.0" />
+
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:id="@+id/tvSuburb" android:text="Suburb" android:layout_below="@+id/tvStreetName" android:textSize="30px" android:paddingLeft="4px" />
+
+</RelativeLayout>
 
 <ImageView android:id="@+id/ivWeather" 
-	android:layout_width="wrap_content" 
-	android:src="@drawable/weather_sunny" 
 	android:clickable="true" 
-	android:layout_x="10dip" 
-	android:layout_height="wrap_content" 
-	android:baselineAlignBottom="true" android:layout_y="100px">
+	android:scaleType="fitXY" android:layout_height="140px" android:layout_width="140px" android:layout_x="40px" android:layout_y="50px" android:src="@drawable/weather_not_available">
 </ImageView>
+
+
 
 </AbsoluteLayout>

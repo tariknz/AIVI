@@ -4,10 +4,20 @@ public class NavItem {
 	
 	private String name;
 	private int imageId;
+	private String component;
+	private String activity;
 	
 	public NavItem(String name, int imageId){
 		this.name = name;
 		this.imageId = imageId;
+		
+	}
+	
+	public NavItem(String name, int imageId, String component, String activity){
+		this.name = name;
+		this.imageId = imageId;
+		this.component = component;
+		this.activity = activity;
 		
 	}
 
@@ -27,12 +37,20 @@ public class NavItem {
 		return name;
 	}
 
+	public String getComponent() {
+		return component;
+	}
+
+	public String getActivity() {
+		return activity;
+	}
+	
+
 	@Override
 	public String toString() {
 		return name;
 	}
-	
-	
+
 	
 	
 	
