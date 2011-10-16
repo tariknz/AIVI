@@ -1,0 +1,4 @@
+# Copyright 2010 - Tarik Al-Ani - University of Otago #
+
+This GPS library has been modified (from MBM) to be compatible for the OMAP3530 Board and the SiRFstar III GPS8000-S Module used in the AIVI platform.
+

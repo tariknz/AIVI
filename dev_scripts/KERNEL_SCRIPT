@@ -1,0 +1,43 @@
+#!/bin/bash
+clear
+echo "Andreo Development Script - Tarik Al-Ani 2010 (C)"
+DATE=`date +%m%d`
+CUR_VER=0.2.21
+LATEST_BUILD=$CUR_VER.${DATE#0}
+FILENAME=0xkernel
+CONFIG_FILE=devkit8000_defconfig
+
+cd '/home/tarik/Desktop/latestbuilds'
+echo "LATEST BUILD = $LATEST_BUILD"
+mkdir -p $LATEST_BUILD
+cd $LATEST_BUILD
+echo ""
+
+echo "---- SAVE KERNEL CONFIG ($CONFIG_FILE) ----"
+
+cd "/home/tarik/workingfolder2/kernel"
+#make ARCH=arm $CONFIG_FILE
+
+echo "---- COMPILING KERNEL ----"
+
+echo "- compiling'"
+make -j5 ARCH=arm CROSS_COMPILE=../prebuilt/linux-x86/toolchain/arm-android-eabi-4.4.1/bin/arm-android-eabi- uImage
+
+cd '/home/tarik/Desktop/latestbuilds/'$LATEST_BUILD
+
+echo "- Check for existing build"
+if [ -f "$FILENAME" ]; then 
+	echo "- Found existing build - Moving to backup"
+	mkdir -p backup
+	mv -u $FILENAME 'backup/'$FILENAME
+	echo "- Backup Done"
+fi
+
+echo ""
+echo "- Copy uImage to latest build"
+cp '/home/tarik/workingfolder2/kernel/arch/arm/boot/uImage' '/home/tarik/Desktop/latestbuilds/'$LATEST_BUILD 
+cd '/home/tarik/Desktop/latestbuilds/'$LATEST_BUILD
+echo "- Rename to '$FILENAME'"
+mv uImage $FILENAME
+echo ""
+echo "---- DONE ----"

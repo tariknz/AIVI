@@ -1,0 +1,23 @@
+#!/bin/bash
+echo ""
+echo "== Andreo: Updating Camera Lib =="
+echo ""
+echo "pulling libcamera.so"
+adb pull '/system/lib/libcamera.so'
+echo "updating libcamera.so"
+adb push '/home/tarik/workingfolder2/out/target/product/devkit8000/system/lib/libcamera.so' '/system/lib/libcamera.so'
+echo "done. reboot to see changes."
+echo ""
+echo "================================="
+echo ""
+
+echo "Would you like to reboot now? (Y/N)"
+read answer_reboot
+if test "$answer_reboot" != "Y" -a "$answer_reboot" != "y";
+then echo "" echo "Done.";
+else 
+	echo ""	
+	echo "- Rebooting Andreo"
+	echo ""	
+	adb shell reboot;
+fi

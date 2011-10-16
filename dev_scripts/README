@@ -1,0 +1,12 @@
+# Copyright 2010 - Tarik Al-Ani - University of Otago #
+
+# These scripts are used to assist in development of AIVI
+
+# Contents
+
+ADB_PUSH_LIB 	- Pushes compiled GPS library into the system, updates and restarts device.
+ALSA_SOUND_FIX 	- Sets default sound configuration (needed during development, now it is automatic upon boot).
+KERNEL_SCRIPT	- Compiles, backs-up and prepares the Android LINUX KERNEL to be flashed into device.
+PUSH_LIB CAMEAR - Pushes compiled Camera library into the system, updates and restarts device.
+COMPILE_N_PREP	- Compiles, backs-up and prepares Android O.S. to be flashed into target device.
+

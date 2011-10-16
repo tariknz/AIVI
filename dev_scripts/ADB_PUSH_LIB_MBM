@@ -1,0 +1,23 @@
+#!/bin/bash
+echo ""
+echo "== Andreo: Updating GPS Library =="
+echo ""
+echo "pulling libmbm-gps.so ..."
+adb pull '/system/lib/libmbm_gps.so'
+echo "updating libfreerunner_gps.so ..."
+adb push '/home/tarik/workingfolder2/out/target/product/devkit8000/system/lib/libmbm-gps.so' '/system/lib/libmbm-gps.so'
+echo "done. reboot to see changes."
+echo ""
+echo "=================================="
+echo ""
+
+echo "Would you like to reboot now? (Y/N)"
+read answer_reboot
+if test "$answer_reboot" != "Y" -a "$answer_reboot" != "y";
+then echo "" echo "Done.";
+else 
+	echo ""	
+	echo "- Rebooting Andreo"
+	echo ""	
+	adb shell reboot;
+fi

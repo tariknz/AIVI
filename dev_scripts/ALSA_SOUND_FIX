@@ -1,0 +1,13 @@
+#!/bin/bash
+echo ""
+echo "== Andreo: ALSA Sound Fix =="
+echo ""
+adb shell alsa_amixer set 'PredriveL Mux' DACL2
+adb shell alsa_amixer set 'PredriveR Mux' DACR2
+adb shell alsa_amixer set PreDriv 100 unmute
+adb shell alsa_amixer set 'DAC2 Digital Fine' 100
+echo ""
+echo "done."
+echo ""
+echo "============================"
+echo ""
