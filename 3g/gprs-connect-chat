@@ -1,0 +1,43 @@
+# /etc/ppp/gprs-connect-chat
+# chat script for Vodafone Vodem
+ABORT "DELAYED"
+ABORT "NO CARRIER"
+ABORT "BUSY"
+ABORT "ERROR"
+ABORT "NO DIALTONE"
+# Abort connection if response was: Delayed, No carrier (ISP),
+# Busy signal or Error on connection
+
+TIMEOUT 40				
+# Sets connection timeout (40 seconds)
+
+'' AT
+OK ATZ
+
+# AT Commands used to initiate connection. Expects OK response
+# to continue, else throws an error.
+# ATZ = Reset modem to default config
+
+# Disables ZeroCD Mode
+OK AT+ZCDRUN=8			
+
+OK "ATQ0 V1 E0 S0=0 &C1 &D2 +FCLASS=0"
+
+# ATQ0 = Quite off (Enables messages)
+# V1 = Verbal messages (Words instead of numerical messages – V0)
+# E0 = No Local Echo
+# S0=0 = No auto-answer
+# &C1 = Modem asserts DCD (Data Carrier Detect) when carrier
+# detected used to indicate that the modem is connected
+# to an external remote modem.
+# &D2 = Reset modem when DTR signal (hangup) is set.
+# +FCLASS=0 = Select active service (0)
+
+OK AT+CGDCONT=1,"IP","www.vodafone.net.nz"			
+# Create Connection ID 1 (AT+CGDCONT=1) for Vodafone APN
+
+OK ATDT*99#			
+# Initiates connection to the default Connection ID (1)
+
+CONNECT ''
+# Connects

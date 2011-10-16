@@ -1,0 +1,5 @@
+# Copyright 2011 - Tarik Al-Ani - University of Otago #
+
+init.rc		- Startup scripts when Android boots, included sound initialisation and automatically establishing a 3G connection
+option.c	- Updated OPTION driver for the 3G module used (not developed)
+.config		- Configuration file for the Kernel, enables the modules used for the AIVI hardware setup.

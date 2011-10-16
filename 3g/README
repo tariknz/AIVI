@@ -1,0 +1,4 @@
+# Copyright 2011 - Tarik Al-Ani - University of Otago #
+
+gprs-connect-chat	- Chat script for the 3G Modem, sends AT codes via terminal to setup and establish a connection.
+peers/vodafone		- Settings for the point to point protocol daemon (pppd)

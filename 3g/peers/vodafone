@@ -1,0 +1,15 @@
+# /etc/ppp/peers/vodafone
+# Vodafone NZ pppd script (ZTE K3765-Z)
+# Usage: root > pppd call vodafone
+
+/dev/ttyUSB3 	# Interface/Communication channel used for 3G.
+
+460800 			# Communication Speed
+crtscts 		# Enables hardware handshaking
+modem 			# Device type
+noauth 			# Authentication method (No Authentication specified).
+debug 			# Enable debugging
+nodetach 		# No detach mode (do not detach/drop).
+usepeerdns 		# Ask peer (Vodafone) for DNS server address
+noipdefault 	# No default IP.
+defaultroute 	# Use default route (No specific routing).
