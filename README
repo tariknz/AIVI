@@ -5,6 +5,7 @@ AndreoCarHome 	- The AIVI CarHome application launcher, contains all source code
 dev_scripts		- These scripts are used to assist in development of AIVI
 gps				- Contains modified source-code for the GPS library used for AIVI
 images			- Compiled Android O.S and Linux Kernel images ready to be flashed onto the same device
+logos			- Resources for the logo design and boot menu
 mic				- Modified mic components to allow the twl mic to interface with Android
 other			- Contains other uncategorised code
 
